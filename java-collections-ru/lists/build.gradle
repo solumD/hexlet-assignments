@@ -2,6 +2,7 @@ plugins {
   id 'java'
   id 'com.adarshr.test-logger' version '2.1.1'
   id 'checkstyle'
+  id 'application'
 }
 
 repositories {
@@ -38,4 +39,8 @@ task checkExercises (type: Checkstyle) {
     exclude '**/build/**'
     classpath = files()
   }
+}
+
+application {
+  mainClass = 'java.exercise.App'
 }
